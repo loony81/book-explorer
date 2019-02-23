@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import {Form, Button, InputGroup, FormControl} from 'react-bootstrap';
 
 class Global extends Component {
+
+	search(){
+		console.log("search");
+	}
+
 	render(){
 		return (
 			<div>
@@ -13,7 +18,7 @@ class Global extends Component {
 					      placeholder="Search for a book"
 					      aria-label="Search for a book"
 					    />
-					    <InputGroup.Append >
+					    <InputGroup.Append onClick={()=> this.search()}>
 					      <Button variant="outline-primary"><i data-feather="search"></i></Button>
 					    </InputGroup.Append>
 					  </InputGroup>
