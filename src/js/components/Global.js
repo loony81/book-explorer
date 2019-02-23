@@ -14,7 +14,7 @@ class Global extends Component {
 					      aria-label="Search for a book"
 					    />
 					    <InputGroup.Append >
-					      <Button variant="outline-primary">Search</Button>
+					      <Button variant="outline-primary"><i data-feather="search"></i></Button>
 					    </InputGroup.Append>
 					  </InputGroup>
 					  </Form.Group>
