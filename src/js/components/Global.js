@@ -3,8 +3,15 @@ import {Form, Button, InputGroup, FormControl} from 'react-bootstrap';
 
 class Global extends Component {
 
+	constructor(props){
+		super(props);
+		this.state = {
+			query: ""
+		};
+	}
+
 	search(){
-		console.log("search");
+		console.log(this.state.query);
 	}
 
 	render(){
@@ -17,6 +24,7 @@ class Global extends Component {
 					    <FormControl
 					      placeholder="Search for a book"
 					      aria-label="Search for a book"
+					      onChange={event => this.setState({query: event.target.value})}
 					    />
 					    <InputGroup.Append onClick={()=> this.search()}>
 					      <Button variant="outline-primary"><i data-feather="search"></i></Button>
