@@ -6,7 +6,8 @@ class Global extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			query: ""
+			query: "",
+			items: []
 		};
 	}
 
@@ -14,7 +15,10 @@ class Global extends Component {
 		const BASE_URL = "https://www.googleapis.com/books/v1/volumes?q=";
 		fetch(`${BASE_URL}${this.state.query}`, {method: "GET"})
 			.then(response => response.json())
-				.then(json => console.log(json));
+				.then(json => {
+					let {items} = json;
+					this.setState({items})
+				});
 	}
 
 	render(){
