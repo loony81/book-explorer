@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Form, Button, InputGroup, FormControl} from 'react-bootstrap';
+import Gallery from './Gallery';
 
 class Global extends Component {
 
@@ -39,7 +40,8 @@ class Global extends Component {
 					    </InputGroup.Append>
 					  </InputGroup>
 					  </Form.Group>
-				  
+				  	  
+				  	  <Gallery items={this.state.items}/>
 			</div>
 		)
 	}
