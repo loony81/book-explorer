@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 
 class Gallery extends Component {
 	render(){
+
+		let alternative = "https://drive.google.com/uc?id=1H7UPlh6K1k-LSxZfX0XT48i1VLHyrV04";
+
 		return (
 			<div>
 			{
@@ -10,7 +13,7 @@ class Gallery extends Component {
 					return (
 						<div key={index}>
 						<img 
-							src={imageLinks !== undefined ? imageLinks.thumbnail : ""} 
+							src={imageLinks !== undefined ? imageLinks.thumbnail : alternative} 
 							alt="book image"
 						/>
 						{title}
