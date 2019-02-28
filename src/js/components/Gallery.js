@@ -11,12 +11,15 @@ class Gallery extends Component {
 				this.props.items.map((item,index) => {
 					let {title, imageLinks, infoLinks} = item.volumeInfo;
 					return (
-						<div key={index}>
-						<img 
-							src={imageLinks !== undefined ? imageLinks.thumbnail : alternative} 
-							alt="book image"
-						/>
-						{title}
+						<div key={index} className="book">
+							<img 
+								src={imageLinks !== undefined ? imageLinks.thumbnail : alternative} 
+								alt="book image"
+								className="book-img"
+							/>
+							<div className="book-title">
+							    {title}
+							</div>
 						</div>
 					)
 				})
