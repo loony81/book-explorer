@@ -4,8 +4,8 @@
   "description": "A small app that helps to discover books on the Web",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --mode production"
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development"
   },
   "keywords": [
     "books",
