@@ -10,6 +10,7 @@ class Gallery extends Component {
 			{
 				this.props.items.map((item,index) => {
 					let {title, imageLinks, infoLink} = item.volumeInfo;
+					let {saleability, retailPrice} = item.saleInfo;
 					return (
 						<a 
 							key={index} 
@@ -24,6 +25,9 @@ class Gallery extends Component {
 							/>
 							<div className="book-title">
 							    {title}
+							</div>
+							<div className="book-price">
+								{saleability === 'NOT_FOR_SALE' ? <p className="not-for-sale">NOT FOR SALE</p> : <p className="for-sale">{retailPrice.amount} {retailPrice.currencyCode}</p>}
 							</div>
 						</a>
 					)

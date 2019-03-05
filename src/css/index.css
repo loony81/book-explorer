@@ -21,7 +21,7 @@
 	border: 2px solid #000;
 	border-radius: 4px;
 	object-fit: cover;
-	position: absolute;
+	
 }
 
 .book-title{
@@ -34,4 +34,9 @@
 	position: absolute;
 	bottom: 0;
 	padding: 10px;
+}
+
+.book-price {
+	font-size: .8em;
+	text-align: right;
 }
